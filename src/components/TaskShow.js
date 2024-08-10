@@ -1,8 +1,10 @@
 function TaskShow({ task }) {
   return (
-    <div>
-      <div>{task.time}</div>
-      <div>{task.details}</div>
+    <div className="card">
+      <div className="card-content">
+        <b>{task.time}</b>
+        <div>{task.details}</div>
+      </div>
     </div>
   );
 }

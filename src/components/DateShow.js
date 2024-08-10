@@ -13,10 +13,20 @@ function DateShow({ date, changeDate, curDate }) {
   );
 
   if (date.getTime() === curDate.getTime()) {
-    displayDate = <b>{displayDate}</b>;
+    displayDate = <span className="has-text-weight-bold">{displayDate}</span>;
   }
 
-  return <div onClick={handleClick}>{displayDate}</div>;
+  return (
+    <div className="column">
+      <button
+        className="button is-warning "
+        onClick={handleClick}
+        style={{ "borderRadius": "50px" }}
+      >
+        <span className="has-text-weight-light">{displayDate}</span>
+      </button>
+    </div>
+  );
 }
 
 export default DateShow;

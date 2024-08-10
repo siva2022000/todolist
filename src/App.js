@@ -1,3 +1,5 @@
+import "bulma/css/versions/bulma-no-dark-mode.css";
+import "./index.css";
 import { useState } from "react";
 import ProfileShow from "./components/ProfileShow";
 import DateList from "./components/DateList";
@@ -12,7 +14,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="flex-custom">
       <ProfileShow />
       <DateList />
       <TaskList tasks={tasks} />

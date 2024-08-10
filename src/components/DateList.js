@@ -20,11 +20,12 @@ function DateList() {
   }
 
   return (
-    <div>
-      <div>
+    <div style={{ paddingTop: "20px", paddingBottom: "20px" }}>
+      <b>
         {curDate.getFullYear()}/{curDate.getMonth() + 1}
-      </div>
-      {renderedDates}
+      </b>
+
+      <div className="columns">{renderedDates}</div>
     </div>
   );
 }
