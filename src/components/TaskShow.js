@@ -1,7 +1,9 @@
+import { useState } from "react";
 import editImg from "../images/editImage.svg";
 import deleteImg from "../images/deleteImage.svg";
 
 function TaskShow({ task, onDelete, onUpdate }) {
+  const [strikeTask, setStrikeTask] = useState(false);
   const deleteTask = () => {
     onDelete(task);
   };
@@ -10,6 +12,9 @@ function TaskShow({ task, onDelete, onUpdate }) {
     onUpdate(task);
   };
 
+  const handleChange = (event) => {
+    setStrikeTask(event.target.checked);
+  };
   return (
     <div className="card">
       <div className="card-content  pt-3 pb-2">
@@ -18,10 +23,20 @@ function TaskShow({ task, onDelete, onUpdate }) {
             <div className="container">
               <div>{task.time}</div>
               <div>
-                <label className="checkbox mt-4">
+                <label
+                  className="checkbox mt-4"
+                  checked={strikeTask}
+                  onChange={handleChange}
+                >
                   <input type="checkbox" />
                   <span className="ml-2">
-                    <b>{task.details}</b>
+                    <b
+                      style={
+                        strikeTask ? { textDecoration: "line-through" } : {}
+                      }
+                    >
+                      {task.details}
+                    </b>
                   </span>
                 </label>
               </div>
