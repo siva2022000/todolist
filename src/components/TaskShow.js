@@ -22,7 +22,16 @@ function TaskShow({ task }) {
             </div>
           </div>
 
-
+          <div className="level-right">
+            <div>
+              <div className="mt-0">
+                <img src={editImg} alt="" />
+              </div>
+              <div className="mt-5 mb-0">
+                <img src={deleteImg} alt="" />
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
