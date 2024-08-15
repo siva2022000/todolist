@@ -1,12 +1,6 @@
 import DateShow from "./DateShow";
-import { useState } from "react";
-function DateList() {
-  const [curDate, setCurDate] = useState(new Date());
 
-  let changeDate = (date) => {
-    setCurDate(date);
-  };
-
+function DateList({ curDate, changeDate }) {
   let startDate = new Date(curDate);
   startDate.setDate(startDate.getDate() - 3);
 

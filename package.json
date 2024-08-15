@@ -8,7 +8,10 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.3",
     "bulma": "^1.0.2",
-    "json-server": "^1.0.0-beta.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "json-server": "^0.17.0",
+    "mongoose": "^8.5.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -16,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "json-server -p 3001 --watch db.json",
+    "server": "node taskServer/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
